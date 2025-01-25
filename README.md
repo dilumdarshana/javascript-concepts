@@ -1,9 +1,5 @@
-# Creational Patterns
-- Factory
-- Singleton
+# Javascript main topics
 
-# Structural Patterns
-- Decorator
+## Design Patterns (design-patterns)
 
-# Behavioral Patterns
-- Observer
+## Built in utils (utils)
