@@ -5,13 +5,15 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "immer": "tsx immer.ts"
+    "immer": "tsx immer.ts",
+    "rxjs": "tsx rxjs.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "immer": "^10.1.1"
+    "immer": "^10.1.1",
+    "rxjs": "^7.8.2"
   },
   "devDependencies": {
     "tsx": "^4.19.3"
