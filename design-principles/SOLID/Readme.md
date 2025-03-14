@@ -8,7 +8,7 @@
 
 Wrong Way;
 
-```
+```javascript
 class Coder {
   constructor(fullName, language, hobby, education, workplace, position) {
     this.fullName = fullName;
@@ -33,7 +33,7 @@ class CoderFilter {
 ```
 Correct Way:
 
-```
+```javascript
 // modify the filter class this way, can introduce any attributes to the Coder class
 class CoderFilter {
   filterByAttribute(coders, attribute) {
@@ -43,11 +43,11 @@ class CoderFilter {
 ```
 
 3. Liskov Substitution
-  Every subclass or derived class should be substitutable for their base or parent class. Which means all the subclass methids should work exactly the way it work in parent class
+  Every subclass or derived class should be substitutable for their base or parent class. Which means all the subclass methods should work exactly the way it work in parent class
 
 Wrong Way:
 
-```
+```javascript
 Class Rectable {
   constructor(width, height) {
     this._width = width;
@@ -82,7 +82,7 @@ console.log(square.getArea()) // this will return 6 which is a wrong value. It s
 
 Correct Way:
 
-```
+```javascript
 // correct way of writing a child class
 class Square extends Rectangle {
   constructor(size) {
@@ -109,7 +109,7 @@ class Square extends Rectangle {
 
 Wrong Way:
 
-```
+```javascript
 interface VehicleInterface {
   drive(): string;
   fly(): string
@@ -149,7 +149,7 @@ class AirPlane implements VehicleInterface {
 
 Correct Way:
 
-```
+```javascript
 interface CarInterface {
   drive(): string;
 }
@@ -182,11 +182,11 @@ class AirPlane implements AirPlaneInterface {
 ```
 
 5. Dependency inversion
-  High level modules should not be depends on low level modules
+  Depend on abstractions, not concrete implementations
 
-Wrong Way:
+Wrong Way: High level modules should not be depends on low level modules
 
-```
+```javascript
 class FileSystem {
   writeToFile(data) {
     // logic to write in to File
@@ -224,7 +224,7 @@ class SaveManager {
 
 Correct Way:
 
-```
+```javascript
 class FileSystem {
   save(data) {
     // logic to write in to File
@@ -248,5 +248,10 @@ class SaveManager {
    type.save(data);
   }
 }
+
+const myManager = new SaveManager();
+const localStorage = new LocalStorage();
+
+myManager.saveData(localStorage, {});
 
 ```
